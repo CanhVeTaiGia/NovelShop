@@ -1,0 +1,26 @@
+body{
+    width: 100%;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: rgb(0, 153, 255);
+}
+
+header .main-logo{
+    width: 60px;
+    height: 60px;
+    border-radius: 2px;
+    margin: 10px 10px 10px 150px;
+}
+
+header .search{
+    width: 400px;
+    height: 40px;
+    border-radius: 5px;
+    outline: none;
+    padding-left: 10px;
+    border: none;
+}
