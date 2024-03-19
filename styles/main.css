@@ -1,0 +1,111 @@
+section{
+    display: flex;
+    width: 100%;
+}
+
+section nav{
+    max-width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+section nav .section-category{
+    position: relative;
+    display: flex;
+    display: sticky;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px 120px 0px 60px;
+    width: 75%;
+    background-color: #fff;
+    padding: 10px 15px;
+    border-radius: 4px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    cursor: pointer;
+    font-weight: 600;
+    height: 40px;
+}
+
+nav .section-category .category-list{
+    position: absolute;
+}
+
+section nav .cost-filter{
+    position: relative;
+    display: flex;
+    display: sticky;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0px 0px 60px;
+    width: 75%;
+    height: 40px;
+    background-color: #fff;
+    padding: 10px 15px;
+    border-radius: 4px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+nav .cost-filter .cost-list{
+    position: absolute;
+}
+
+section .shop{
+    width: 70%;
+    /* background-color: aquamarine; */
+    margin-top: 30px;
+}
+
+section .shop .banner{
+    width: 95%;
+}
+
+section .shop .items{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    margin-right: 20px;
+    background-color: #fff;
+    width: 200px;
+    height: 350px;
+    border-radius: 5px;
+    padding: 2px;
+    justify-content: center;
+}
+
+section .shop .shop-list{
+    display: flex;
+    flex-direction: row;
+}
+
+.shop-list .items .lN-banner{
+    display: flex;
+    margin-top: 2px;
+    width: 80%;
+    height: fit-content;
+    /* justify-self: center; */
+}
+
+.shop-list .items .div{
+    display: flex;
+    width: 80%;
+    height: 30%;
+}
+
+.items .div .lN-cost{
+    color: red;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.items .div span{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.items .div .sold{
+    font-weight: 400;
+}
