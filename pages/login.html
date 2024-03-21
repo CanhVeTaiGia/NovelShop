@@ -8,10 +8,11 @@
     <link rel="stylesheet" href="../styles/login.css">
 </head>
 <body>
-    <form action="">
+    <form id="form">
         <h1 class="title">Đăng nhập</h1>
-        <input class="input" type="text" placeholder="Tên / Email">
-        <input class="input" type="password" placeholder="Mật khẩu">
+        <h2 id="alerts"></h2>
+        <input id="email-names" class="input" type="text" placeholder="Tên / Email">
+        <input id="password" class="input" type="password" placeholder="Mật khẩu">
         <div class="remember-me">
             <input type="checkbox" class="remember-btn">
             <label>Nhớ tôi</label>
@@ -20,7 +21,8 @@
             <a class="sign-in" href="./signup.html">Đăng kí</a>
             <a class="sign-in" href="">Forgot account?</a>
         </div>
-        <button onclick="submit()" class="submit" type="submit">Submit</button>
+        <button class="submit" type="submit">Đăng nhập</button>
     </form>
 </body>
+<script src="../scripts/login.js"></script>
 </html>

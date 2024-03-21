@@ -4,9 +4,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product</title>
+    <link rel="stylesheet" href="../styles/all.css">
+    <link rel="stylesheet" href="../styles/header.css">
     <link rel="stylesheet" href="../styles/item.css">
+    <link rel="stylesheet" href="../styles/footer.css">
 </head>
 <body>
-    
+    <!-- header -->
+    <header>
+        <img class="main-logo" src="../assets/imgs/mainlogo/ssstik.io_1710753346822.jpeg">
+        <div class="search-div">
+            <input placeholder="Tìm kiếm sản phẩm..." class="search" type="search">
+            <div class="search-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </div>
+        <div onclick="accTools()" class="user">
+            <i class="fa-regular fa-user"></i>
+            <p id="log" class="log">Đăng kí / Đăng nhập</p>
+            <p id="user-name" class="log"></p>
+        </div>
+        <div class="carts">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <p class="carts-p">Giỏ hàng</p>
+            <div class="count">
+                <p class="counts">0</p>
+            </div>
+        </div>
+        <div class="category">
+            <i class="fa-solid fa-list"></i>
+            <p class="title-category">
+                DANH MỤC SẢN PHẨM
+            </p>
+            <div class="category-son">
+            </div>
+        </div>
+    </header>
+    <!-- header -->
+
+    <!-- main -->
+    <section>
+        <div class="product-info">
+            <div class="product-banner">
+                <img class="banner" src="../assets/imgs/items/aryaTap1.jpg" alt="">
+            </div>
+            <div class="info">
+                <div onclick="goBack()" class="return"><</div>
+                <h2 class="title">Arya bàn bên thi thoảng thả thính tôi bằng tiếng Nga - Tập 1</h2>
+                <span class="span">
+                    <span id="product-id" class="status-id">Mã sản phẩm:<span class="id-status"></span></span>|
+                    <span id="product-status" class="status-id">Tình trạng:<span class="id-status"></span></span>
+                </span>
+                <div class="cost-area">
+                    <span class="cost-title">Giá:</span>
+                    <span class="cost">300000đ</span>
+                </div>
+                <div class="quantity-info">
+                    <span class="title">Số lượng:</span>
+                    <div class="quantity">-</div>
+                    <input value="1" type="text" id="quantity-count" class="quantity"></input>
+                    <div class="quantity">+</div>
+                </div>
+                <div class="buybtn">
+                    <button onclick="addToCart()" class="buy-or-cart">THÊM VÀO GIỎ</button>
+                    <button onclick="buyNow()" class="buy-or-cart">MUA NGAY</button>
+                </div>
+                <div class="product-description">
+                    <h3 class="title">MÔ TẢ SẢN PHẨM</h3>
+                    <div class="pd-son">Tác giả: </div>
+                    <div class="pd-son">Thể loại: </div>
+                    <div class="pd-son">Năm sản xuất: </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- section -->
+
+    <!-- footer -->
+    <footer>
+        <div class="footer-son">
+            <h3 class="title">Liên hệ</h3>
+            <p class="address">126H3/ Nhuệ Giang/ Bà Triệu/ Hà Đông/ Hà Nội</p>
+        </div>
+        <div class="footer-son">
+            <h3 class="title">Hỗ trợ khách hàng</h3>
+            <ul class="support-list">
+                <li class="support-items">Chính sách thanh toán</li>
+                <li class="support-items">Chính sách vận chuyển</li>
+                <li class="support-items">Chính sách bảo mật hệ thống</li>
+            </ul>
+        </div>
+        <div class="footer-son">
+            <h3 class="title">Liên kết</h3>
+            <ul class="support-list">
+                <li class="support-items">Facebook</li>
+                <li class="support-items">Zalo</li>
+                <li class="support-items">Discord</li>
+            </ul>
+        </div>
+    </footer>
+    <!-- footer -->
 </body>
+<script src="https://kit.fontawesome.com/4ce7f9b3cb.js" crossorigin="anonymous"></script>
 </html>

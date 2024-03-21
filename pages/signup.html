@@ -8,12 +8,13 @@
     <link rel="stylesheet" href="../styles/signup.css">
 </head>
 <body>
-    <form action="">
+    <form id="form">
         <h1 class="title">Đăng kí</h1>
-        <input class="input" type="text" placeholder="Tên">
-        <input class="input" type="text" placeholder="Email">
-        <input class="input" type="password" placeholder="Mật khẩu">
-        <input class="input" type="password" placeholder="Nhập lại mật khẩu">
+        <h3 id="alerts">Không được để trống ô input</h3>
+        <input id="names" class="input" type="text" placeholder="Tên">
+        <input id="email" class="input" type="text" placeholder="Email">
+        <input id="password" class="input" type="password" placeholder="Mật khẩu">
+        <input id="rePassword" class="input" type="password" placeholder="Nhập lại mật khẩu">
         <div class="remember-me">
             <input type="checkbox" class="remember-btn">
             <label>Điều khoản và điều luật</label>
@@ -21,7 +22,8 @@
         <div class="sign-in-forgot">
             <a class="sign-in" href="./signup.html">Đăng nhập</a>
         </div>
-        <button onclick="submit()" class="submit" type="submit">Đăng kí</button>
+        <button type="submit" class="submit">Đăng kí</button>
     </form>
 </body>
+<script src="../scripts/signup.js"></script>
 </html>

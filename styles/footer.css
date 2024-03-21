@@ -1,3 +1,41 @@
 footer{
+    margin-top: 20px;
     width: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer .footer-son{
+    /* display: flex; */
+    margin-top: 20px;
+    /* width: 80%; */
+    /* flex-direction: column; */
+}
+
+footer .footer-son .address{
+    font-size: 14px;
+    font-weight: 300;
+    color: #686868;
+}
+
+footer .footer-son .title{
+    color: #00c3ff;
+    margin-bottom: 10px;
+}
+
+footer .footer-son .support-list{
+    margin-left: 15px;
+    font-size: 14px;
+    color: #686868;
+}
+
+.footer-son .support-list .support-items{
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.footer-son .support-list .support-items:hover{
+    color: #00c3ff;
+    transition: .1s linear;
 }

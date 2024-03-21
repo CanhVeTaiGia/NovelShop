@@ -108,3 +108,7 @@ form .submit:hover{
     background-color: #00ffff;
     cursor: pointer;
 }
+
+form #alerts{
+    display: none;
+}
