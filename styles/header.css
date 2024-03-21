@@ -125,24 +125,35 @@ header .category .category-son{
 header .user .login-tab{
     color: #555555;
     position: absolute;
-    width: 400px;
+    width: 300px;
     display: flex;
-    flex-direction: column;
+    padding: 20px;
+    /* flex-direction: column; */
     background-color: #fff;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     justify-content: center;
     align-items: center;
     top: 30px;
-    left: -200px;
-    font-size: 16px;
+    left: -100px;
+    gap: 10px;
 }
 
-.user .login-tab .title{
-    font-size: 24px;
-    text-align: center;
-    width: 90%;
-    margin-top: 15px;
-    margin-bottom: 20px;
-    /* border-bottom: 1px solid #cccccc; */
-    font-weight: 500;
+.user .login-tab .signup-login{
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    background: #0095ff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.user .login-tab .signup-login:hover{
+    border: 1px solid #0095ff;
+    color: #0095ff;
+    background: #fff;
+}
+
+.user .login-tab #logout{
+    display: none;
 }

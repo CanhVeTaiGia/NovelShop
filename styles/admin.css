@@ -1,0 +1,306 @@
+body{
+    background-color: #fff;
+    color: #fff;
+    /* overflow-y: hidden; */
+}
+
+/* header */
+.header{
+    top: 0px;
+    width: 100%;
+    height: 80px;
+    background-color: #0093fc;
+    display: flex;
+    /* position: sticky; */
+    /* z-index: 3; */
+    align-items: center;
+    justify-content: space-around;
+    font-size: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.header .fa-user{
+    font-size: 40px;
+    /* cursor: pointer; */
+}
+
+.header h1{
+    cursor: default;
+}
+
+.header .signout{
+    display: flex;
+    /* width: 120px; */
+    gap: 10px;
+    cursor: pointer;
+    /* text-align: center; */
+    align-items: center;
+}
+
+.header .signout:hover{
+    opacity: .5;
+}
+
+
+/* section */
+.section{
+    display: flex;
+    width: 100%;
+    height: 89.2vh;
+    /* overflow: hidden; */
+    /* height: 100%; */
+}
+
+.section .navbar{
+    /* display: ; */
+    background-color: #3badff;
+    position: sticky;
+    top: 0px;
+    /* z-index: 3; */
+    height: 100%;
+    width: 10%;
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.section .navbar .menu-lists{
+    list-style: none;
+    font-size: 14px;
+}
+
+.section .navbar h2{
+    cursor: default;
+}
+
+.navbar .menu-lists .menu-item{
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.navbar .menu-lists .menu-item:hover{
+    opacity: .5;
+}
+
+.section .products-users-contents{
+    width: 90%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.section .products-users-contents .tools{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #6eccff;
+    padding: 10px;
+}
+
+.products-users-contents .tools button{
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    background: #3badff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.products-users-contents .tools button:hover{
+    opacity: 0.9;
+}
+
+.tools .search .search-input{
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    width: 200px;
+    padding-left: 10px;
+    height: 30px;
+}
+
+.section .products-users-contents .table{
+    width: 100%;
+    height: 50px;
+    color: #0093fc;
+    overflow: scroll;
+}
+
+.section .products-users-contents .add-or-edit{
+    position: absolute;
+    /* display: none; */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    /* background-color: #fff; */
+    color: #0093fc;
+    display: none;
+    /* background-color: red; */
+}
+
+.section .add-or-edit .form{
+    width: 60%;
+    position: relative;
+    height: 80%;
+    background-color: #3badff;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+}
+
+.add-or-edit .form .cancel{
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    right: 10px;
+    top: 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: #6eccff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.add-or-edit .form .cancel:hover{
+    opacity: 0.8;
+}
+
+.thead tr th{
+    border: 1px solid #0093fc;
+    height: 60px;
+}
+
+.tbody{
+    overflow-y: auto;
+}
+
+.tbody::-webkit-scrollbar{
+    display: flex;
+    width: 5px;
+}
+
+.tbody tr td{
+    border: 1px solid #0093fc;
+    /* height: 70px; */
+    text-align: center;
+    height: 76px;
+}
+
+.tbody tr .tool:hover{
+    color: red;
+}
+
+.tbody td .img{
+    height: 68px;
+    /* height: 67px; */
+    /* width: 100%; */
+}
+
+.add-or-edit .form .change-value{
+    width: 40%;
+    /* margin-top: 10px; */
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    outline-style: none;
+    padding-left: 10px;
+    /* margin-bottom: 10px; */
+}
+
+.add-or-edit .form .submit{
+    display: flex;
+    /* text-align: center; */
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: #6eccff;
+    color: #Fff;
+    cursor: pointer;
+}
+
+.add-or-edit .form .submit:hover{
+    background-color: #fff;
+    color: #6eccff;
+    border: 1px solid #6eccff;
+}
+
+.section .products-users-contents .retry{
+    width: 100%;
+    height: 100%;
+    display: none;
+    /* background-color: #fff; */
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+} 
+
+.products-users-contents .retry .subRetry{
+    width: 30%;
+    height: 30%;
+    background-color: #6eccff;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    /* gap: 10px; */
+    align-items: center;
+}
+
+.retry .subRetry button{
+    width: 100px;
+    height: 30px;
+    border: none;
+    background-color: #fff;
+    color: #3badff;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.retry .subRetry button:hover{
+    opacity: 0.91;
+}
+
+.add-or-edit .form #edit{
+    display: none;
+    cursor: pointer;
+}
+
+.section .users-contents{
+    width: 90%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    /* background-color: red; */
+}
+
+.section .products-users-contents .next-prev{
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.products-users-contents .next-prev .next-prev-son{
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: #6eccff;
+    color: #Fff;
+    cursor: pointer;
+}
+
+.products-users-contents .next-prev .next-prev-son:hover{
+    border: 2px solid #6eccff;
+    color: #6eccff;
+    background-color: #fff;
+}

@@ -49,7 +49,8 @@ form.addEventListener("submit", (e) => {
         names: names.value,
         email: email.value,
         password: password.value,
-        cart: []
+        cart: [],
+        status: false
     }
     users.push(obj);
     localStorage.setItem("users", JSON.stringify(users));

@@ -23,7 +23,9 @@ form.addEventListener("submit", (e) => {
         (emailOrName.value === users[i].email &&
           users[i].password === password.value)
       ) {
+        users[i].status = true;
         localStorage.setItem("currentUser", JSON.stringify(users[i]));
+        localStorage.setItem("users", JSON.stringify(users));
         window.location.href = "../index.html";
       } else {
         alerts.innerHTML = "Tài khoản và mật khẩu không đúng";
