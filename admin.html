@@ -24,8 +24,9 @@
         <nav class="navbar">
             <h2 class="menu">Menu</h2>
             <ul class="menu-lists">
-                <li id="user-admin"class="menu-item"><i class="fa-regular fa-user"></i> Users</li>
-                <li id="product-admin" class="menu-item"><i class="fa-solid fa-shop"></i> Products</li>
+                <li onclick="showUser()" id="user-admin"class="menu-item off"><i class="fa-regular fa-user"></i> Users</li>
+                <li onclick="showProduct()" id="product-admin" class="menu-item off"><i class="fa-solid fa-shop"></i> Products</li>
+                <li inclick="showCategory()" id="category-main" class="menu-item off"><i class="fa-solid fa-list"></i> Category</li>
             </ul>
         </nav>
         <div id="product-contents" class="products-users-contents">
@@ -89,9 +90,9 @@
                     </tr> -->
                 </tbody>
             </table>
-            <div class="next-prev">
-                <button onclick="prevProduct()" class="next-prev-son">Lùi</button>
-                <button onclick="nextProduct()" class="next-prev-son">Tiến</button>
+            <div id="next-prev-products" class="next-prev">
+                <!-- <button id="prev-products" onclick="prevProducts(productDisplayCount)" class="next-prev-son">Lùi</button>
+                <button id="next-products" onclick="nextProducts(productDisplayCount)" class="next-prev-son">Tiến</button> -->
             </div>
         </div>
         <div class="products-users-contents" id="user-contents">
@@ -126,9 +127,9 @@
                     </tr> -->
                 </tbody>
             </table>
-            <div class="next-prev">
-                <button onclick="nextUser()" class="next-prev-son">Lùi</button>
-                <button onclick="prevUser()" class="next-prev-son">Tiến</button>
+            <div  class="next-prev">
+                <button id="prev-users" onclick="prevUser()" class="next-prev-son">Lùi</button>
+                <button id="next-users" onclick="nextUser()" class="next-prev-son">Tiến</button>
             </div>
         </div>
     </section>

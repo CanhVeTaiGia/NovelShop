@@ -178,6 +178,7 @@ body{
 
 .tbody{
     overflow-y: auto;
+    /* height: 450px; */
 }
 
 .tbody::-webkit-scrollbar{
@@ -284,9 +285,11 @@ body{
 }
 
 .section .products-users-contents .next-prev{
-    margin-top: 20px;
+    position: absolute;
     display: flex;
     gap: 20px;
+    /* mar */
+    bottom: 20px;
 }
 
 .products-users-contents .next-prev .next-prev-son{

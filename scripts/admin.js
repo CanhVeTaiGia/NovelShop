@@ -1,128 +1,104 @@
-const userAdmin = document.getElementById("user-admin");
+const tbodyUser = document.getElementById("tbody-user");
 const productAdmin = document.getElementById("product-admin");
-let productDisplayCount = 6;
-displayUsers();
-displayProducts(productDisplayCount);
-let admin = {
-  id: 0,
-  names: "admin",
-  password: "16012005",
-};
-localStorage.setItem("admin", JSON.stringify(admin));
+// displayProduct()
 
-userAdmin.addEventListener("click", () => {
-  const productContents = document.getElementById("product-contents");
-  const userContents = document.getElementById("user-contents");
-  productContents.style.display = "none";
-  userContents.style.display = "flex";
-});
+function displayProduct(a) {
+  const prevProduct = document.getElementById("prev-products");
 
-productAdmin.addEventListener("click", () => {
-  const productContents = document.getElementById("product-contents");
-  const userContents = document.getElementById("user-contents");
-  productContents.style.display = "flex";
-  userContents.style.display = "none";
-});
+  const nextPrevProduct = document.getElementById("next-prev-products");
+  let products = JSON.parse(localStorage.getItem("products")) || [];
 
-function displayUsers(a) {
-  const tbodyUser = document.getElementById("tbody-user");
-  let users = JSON.parse(localStorage.getItem("users"));
-  let text = ``;
-  console.log(users);
-  if (users === null) {
+  text = ``;
+  let count;
+  btnId = ``;
+  if (products.length === 0) {
     return;
   }
-  for (let i = a - 6; i < a; i++) {
+  for (let i = a; i < a + 6; i++) {
+    if (i >= products.length) {
+      break;
+    }
     text += `<tr>
-    <td>${i + 1}</td>
-    <td id="table-user-id">${users[i].id}</td>
-    <td id="table-user-names">${users[i].names}</td>
-    <td id="table-user-email">${users[i].email}</td>
-    <td id="table-user-status">${users[i].status}</td>
+      <td>${i + 1}</td>
+      <td id="table-product-id">${products[i].id}</td>
+      <td id="table-product-names">${products[i].names}</td>
+      <td id="table-product-author">${products[i].author}</td>
+    <td id="table-product-vol">${products[i].vol}</td>
+    <td id="table-product-cost">${products[i].cost}</td>
+    <td id="table-product-years">${products[i].years}</td>
+    <td id="table-product-stock">${products[i].stock}</td>
+    <td id="table-product-img"><img class="img" src="${
+      products[i].images
+    }" alt=""></td>
     <td class="table-edits tool" style="cursor: pointer;" onclick="edits(${
-      users[i].id
+      products[i].id
     })">Sửa</td>
-    <td class="table-deletes tool" style="cursor: pointer;" onclick="ban(${
-      users[i].id
-    })">Khóa</td>
+    <td class="table-deletes tool" style="cursor: pointer;" onclick="deletes(${
+      products[i].id
+    })">Xóa</td>
     </tr>
     `;
+    count = i;
   }
-  tbodyUser.innerHTML = text;
-}
-
-function displayProducts(a) {
+  btnId = `
+  <button id="prev-products" onclick="prevProducts(${count})" class="next-prev-son">Lùi</button>
+  <button id="next-products" onclick="nextProducts(${count})" class="next-prev-son">Tiến</button>
+  `;
+  const nextProduct = document.getElementById("next-products");
   const tbodyProduct = document.getElementById("tbody-product");
-  let products = JSON.parse(localStorage.getItem("products"));
-  let text = ``;
-  let count = 1;
-  if (products === null) {
-    return;
-  }
-  if (a > products.length) {
-    for (let i = a - 6; i < products.length; i++) {
-      text += `<tr>
-      <td>${i + 1}</td>
-      <td id="table-product-id">${products[i].id}</td>
-      <td id="table-product-names">${products[i].names}</td>
-      <td id="table-product-author">${products[i].author}</td>
-      <td id="table-product-vol">${products[i].vol}</td>
-      <td id="table-product-years">${products[i].years}</td>
-      <td id="table-product-cost">${products[i].cost}đ</td>
-      <td id="table-product-stock">${products[i].stock}</td>
-      <td id="table-product-img"><img class="img" src="${
-        products[i].images
-      }" alt=""></td>
-      <td class="table-edits tool" style="cursor: pointer;" onclick="edits(${
-        products[i].id
-      })">Sửa</td>
-      <td class="table-deletes tool" style="cursor: pointer;" onclick="deletes(${
-        products[i].id
-      })">Xóa</td>
-      </tr>
-      `;
-    }
-    tbodyProduct.innerHTML = text;
-    return;
+  tbodyProduct.innerHTML = text;
+  nextPrevProduct.innerHTML = btnId;
+  if (count <= 6) {
+    prevProduct.style.display = "none";
   } else {
-    for (let i = a - 6; i < a; i++) {
-      text += `<tr>
-      <td>${i + 1}</td>
-      <td id="table-product-id">${products[i].id}</td>
-      <td id="table-product-names">${products[i].names}</td>
-      <td id="table-product-author">${products[i].author}</td>
-      <td id="table-product-vol">${products[i].vol}</td>
-      <td id="table-product-years">${products[i].years}</td>
-      <td id="table-product-cost">${products[i].cost}đ</td>
-      <td id="table-product-stock">${products[i].stock}</td>
-      <td id="table-product-img"><img class="img" src="${
-        products[i].images
-      }" alt=""></td>
-      <td class="table-edits tool" style="cursor: pointer;" onclick="edits(${
-        products[i].id
-      })">Sửa</td>
-      <td class="table-deletes tool" style="cursor: pointer;" onclick="deletes(${
-        products[i].id
-      })">Xóa</td>
-      </tr>
-      `;
-    }
-    tbodyProduct.innerHTML = text;
-    return;
+    prevProduct.style.display = "flex";
   }
+  if (count > products.length - 5) {
+    nextProduct.style.display = "none";
+  } else {
+    nextProduct.style.display = "flex";
+  }
+  return count;
 }
 
-function addProduct() {
-  const addOrEdit = document.getElementById("add-or-edit");
-  addOrEdit.style.display = "flex";
+function showProduct() {
+  const productContents = document.getElementById("product-contents");
+  productContents.style.display = "flex";
+  displayProduct(0);
 }
 
-function cancel() {
-  const addOrEdit = document.getElementById("add-or-edit");
-  addOrEdit.style.display = "none";
+function nextProducts(a) {
+  // const nextProducts = document.getElementById("next-products");
+  let count;
+  let products = JSON.parse(localStorage.getItem("products")) || [];
+  for (let i = 0; i < products.length; i++) {
+    if (a === i) {
+      count = i;
+      // console.log(count);
+      break;
+    }
+  }
+  // console.log(count);
+  // if(count >= (products.length - 6)){
+  //   nextProducts.style.display = "none";
+  // }
+  // console.log(products.length);
+  displayProduct(count + 1);
 }
 
-function nextProduct(productDisplayCount){
-  productDisplayCount + 6;
-  displayProducts(productDisplayCount);
+function prevProducts(a) {
+  // const
+  let count;
+  let products = JSON.parse(localStorage.getItem("product")) || [];
+  for (let i = a; i > 0; i--) {
+    if (a === i) {
+      count = i - 10;
+      break;
+    }
+  }
+  displayProduct(count + 1);
+}
+
+function showUser() {
+  // const
 }
