@@ -126,7 +126,7 @@ header .user .login-tab{
     color: #555555;
     position: absolute;
     width: 300px;
-    display: flex;
+    display: none;
     padding: 20px;
     /* flex-direction: column; */
     background-color: #fff;
@@ -142,6 +142,10 @@ header .user .login-tab{
     width: 100px;
     height: 30px;
     border-radius: 5px;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
     border: none;
     background: #0095ff;
     color: #fff;

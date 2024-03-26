@@ -26,6 +26,7 @@ form.addEventListener("submit", (e) => {
     setTimeout(() => {
       alerts.style.display = "none";
     }, 3000);
+    return;
   }
   if (!checkEmail(email.value)) {
     alerts.innerHTML = "EMAIL SAI ĐỊNH DẠNG";
@@ -33,16 +34,35 @@ form.addEventListener("submit", (e) => {
     setTimeout(() => {
       alerts.style.display = "none";
     }, 3000);
-    flag  = false;
+    return;
 } if(password.value !== rePassword.value){
       alerts.innerHTML = "MẬT KHẨU KHÔNG KHỚP";
       alerts.style.display = "flex";
       setTimeout(() => {
         alerts.style.display = "none";
       }, 3000);
-      flag = false;
+      return;
   }
-  console.log(flag);
+  // let users = JSON.parse(localStorage.setItem("users")) || [];
+  for(let i = 0; i < users.length; i++){
+    if(email.value === users[i].email){
+      alerts.innerHTML = "EMAIL ĐÃ ĐƯỢC ĐĂNG KÍ";
+      alerts.style.display = "flex";
+      setTimeout(() => {
+        alerts.style.display = "none";
+      }, 3000);
+      return;
+    }
+    if(names.value === users[i].names){
+      alerts.innerHTML = "TÊN NGƯỜI DÙNG ĐÃ ĐƯỢC ĐĂNG KÍ";
+      alerts.style.display = "flex";
+      setTimeout(() => {
+        alerts.style.display = "none";
+      }, 3000);
+      return;
+    }
+  }
+  // console.log(flag);
   if(flag === true){
     let obj = {
         id: Math.floor(Math.random() * 100000000),

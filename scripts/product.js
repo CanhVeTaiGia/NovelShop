@@ -7,7 +7,9 @@ let products = [
     cost: 115000,
     years: 2021,
     stock: 32,
+    sold: 14,
     images: "./assets/imgs/items/aryaTap1.jpg",
+    category: ["Romace", "Comedy"],
   },
   {
     id: Math.floor(Math.random() * 1000000000),
@@ -17,7 +19,9 @@ let products = [
     years: 2022,
     cost: 120000,
     stock: 12,
+    sold: 12,
     images: "./assets/imgs/items/aryaTap2.jpg",
+    category: ["Romace", "Comedy"],
   },
   {
     id: Math.floor(Math.random() * 1000000000),
@@ -27,7 +31,9 @@ let products = [
     cost: 115000,
     years: 2023,
     stock: 15,
+    sold: 16,
     images: "./assets/imgs/items/aryaTap3.jpg",
+    category: ["Romace", "Comedy"],
   },
   {
     id: Math.floor(Math.random() * 1000000000),
@@ -37,7 +43,9 @@ let products = [
     cost: 115000,
     years: 2023,
     stock: 13,
+    sold: 17,
     images: "./assets/imgs/items/aryaTap4.jpg",
+    category: ["Romace", "Comedy"],
   },
   {
     id: Math.floor(Math.random() * 1000000000),
@@ -47,7 +55,9 @@ let products = [
     cost: 125000,
     years: 2021,
     stock: 24,
+    sold: 10,
     images: "./assets/imgs/items/shimotsukiTap1.jpg",
+    category: ["Romace", "Comedy"],
   },
   {
     id: Math.floor(Math.random() * 1000000000),
@@ -57,7 +67,9 @@ let products = [
     cost: 115000,
     years: 2022,
     stock: 28,
+    sold: 20,
     images: "./assets/imgs/items/shimotsukiTap2.jpg",
+    category: ["Romace", "Comedy"],
   },
   {
     id: Math.floor(Math.random() * 1000000000),
@@ -67,7 +79,9 @@ let products = [
     cost: 120000,
     years: 2019,
     stock: 27,
+    sold: 18,
     images: "./assets/imgs/items/mobusekaTap1.jpg",
+    category: ["Fantasy", "Comedy"],
   },
   {
     id: Math.floor(Math.random() * 1000000000),
@@ -77,7 +91,9 @@ let products = [
     years: 2021,
     cost: 110000,
     stock: 11,
+    sold: 14,
     images: "./assets/imgs/items/mobusekaTap5.jpg",
+    category: ["Fantasy", "Comedy"],
   },
   {
     id: Math.floor(Math.random() * 1000000000),
@@ -88,6 +104,8 @@ let products = [
     cost: 130000,
     stock: 8,
     images: "./assets/imgs/items/thiensuTap1.jpg",
+    sold: 13,
+    category: ["Comedy", "Romace"],
   },
   {
     id: Math.floor(Math.random() * 1000000000),
@@ -98,6 +116,8 @@ let products = [
     cost: 100000,
     stock: 12,
     images: "./assets/imgs/items/thiensuTap2.jpg",
+    sold: 17,
+    category: ["Comedy", "Romace"],
   },
 ];
-localStorage.setItem("products", JSON.stringify(products));
+// localStorage.setItem("products", JSON.stringify(products));

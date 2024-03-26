@@ -22,17 +22,17 @@
             <i class="fa-regular fa-user"></i>
             <p id="log" class="log">Đăng kí / Đăng nhập</p>
             <p id="user-name" class="log"></p>
-            <div class="login-tab">
-                <button class="signup-login" onclick="login()">Đăng nhập</button>
-                <button class="signup-login" onclick="signup()">Đăng kí</button>
+            <div onclick="logintab()" id="login-tab" class="login-tab">
+                <button id="login" class="signup-login" onclick="login()">Đăng nhập</button>
+                <button id="signup" class="signup-login" onclick="signup()">Đăng kí</button>
                 <button id="logout" class="signup-login" onclick="logout()">Đăng xuất</button>
             </div>
         </div>
-        <div class="carts">
+        <div class="carts" onclick="">
             <i class="fa-solid fa-cart-shopping"></i>
             <p class="carts-p">Giỏ hàng</p>
             <div class="count">
-                <p class="counts">0</p>
+                <p id="cart-count" class="counts">0</p>
             </div>
         </div>
         <div class="category">
@@ -67,9 +67,9 @@
         <div class="shop">
             <img src="./assets/imgs/sectionTitle/banner_danh_muc_homepage___collection_1920x580px__light_novel__ce3fdb87f20a4423bca39b43a57eb2e9.jpg" alt="" class="banner">
             <h2 class="title">Light Novel</h2>
-            <div class="shop-list">
+            <div id="shop-list" class="shop-list">
                 <!-- <div class="items">
-                    <img id="lN-banner" class="lN-banner" src="./assets/imgs/items/aryaTap1.jpg" alt="" srcset="">
+                    <img id="lN-banner" class="lN-banner" src="${}" alt="" srcset="">
                     <div class="div">
                         <h5 class="lN-title" id="lN-title">Arya bàn bên thi thoảng thả thính tôi bằng tiếng Nga</h>
                         <span>
@@ -107,6 +107,8 @@
         </div>
     </footer>
     <!-- footer -->
+
 </body>
+<script src="./scripts/index.js"></script>
 <script src="https://kit.fontawesome.com/4ce7f9b3cb.js" crossorigin="anonymous"></script>
 </html>

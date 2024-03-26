@@ -24,7 +24,7 @@ form.addEventListener("submit", (e) => {
           users[i].password === password.value)
       ) {
         users[i].status = true;
-        localStorage.setItem("currentUser", JSON.stringify(users[i]));
+        localStorage.setItem("accountId", JSON.stringify(users[i].id));
         localStorage.setItem("users", JSON.stringify(users));
         window.location.href = "../index.html";
       } else {
