@@ -9,7 +9,7 @@ let products = [
     stock: 32,
     sold: 14,
     images: "./assets/imgs/items/aryaTap1.jpg",
-    category: ["Romace", "Comedy"],
+    // category: ["Tiểu thuyết"],
   },
   {
     id: Math.floor(Math.random() * 1000000000),
@@ -21,7 +21,7 @@ let products = [
     stock: 12,
     sold: 12,
     images: "./assets/imgs/items/aryaTap2.jpg",
-    category: ["Romace", "Comedy"],
+    // category: ["Tiểu thuyết"],
   },
   {
     id: Math.floor(Math.random() * 1000000000),
@@ -33,7 +33,7 @@ let products = [
     stock: 15,
     sold: 16,
     images: "./assets/imgs/items/aryaTap3.jpg",
-    category: ["Romace", "Comedy"],
+    // category: ["Tiểu thuyết"],
   },
   {
     id: Math.floor(Math.random() * 1000000000),
@@ -45,7 +45,7 @@ let products = [
     stock: 13,
     sold: 17,
     images: "./assets/imgs/items/aryaTap4.jpg",
-    category: ["Romace", "Comedy"],
+    // category: ["Tiểu thuyết"],
   },
   {
     id: Math.floor(Math.random() * 1000000000),
@@ -57,7 +57,7 @@ let products = [
     stock: 24,
     sold: 10,
     images: "./assets/imgs/items/shimotsukiTap1.jpg",
-    category: ["Romace", "Comedy"],
+    // category: "Tiểu thuyết",
   },
   {
     id: Math.floor(Math.random() * 1000000000),
@@ -69,7 +69,7 @@ let products = [
     stock: 28,
     sold: 20,
     images: "./assets/imgs/items/shimotsukiTap2.jpg",
-    category: ["Romace", "Comedy"],
+    // category: "Tiểu thuyết",
   },
   {
     id: Math.floor(Math.random() * 1000000000),
@@ -81,7 +81,7 @@ let products = [
     stock: 27,
     sold: 18,
     images: "./assets/imgs/items/mobusekaTap1.jpg",
-    category: ["Fantasy", "Comedy"],
+    // category: "Tiểu thuyết",
   },
   {
     id: Math.floor(Math.random() * 1000000000),
@@ -93,7 +93,7 @@ let products = [
     stock: 11,
     sold: 14,
     images: "./assets/imgs/items/mobusekaTap5.jpg",
-    category: ["Fantasy", "Comedy"],
+    // category: "Tiểu thuyết",
   },
   {
     id: Math.floor(Math.random() * 1000000000),
@@ -105,7 +105,7 @@ let products = [
     stock: 8,
     images: "./assets/imgs/items/thiensuTap1.jpg",
     sold: 13,
-    category: ["Comedy", "Romace"],
+    // category: "Tiểu thuyết",
   },
   {
     id: Math.floor(Math.random() * 1000000000),
@@ -117,7 +117,38 @@ let products = [
     stock: 12,
     images: "./assets/imgs/items/thiensuTap2.jpg",
     sold: 17,
-    category: ["Comedy", "Romace"],
+    // category: "Tiểu thuyết",
   },
 ];
-// localStorage.setItem("products", JSON.stringify(products));
+// localStorage.setItem("products", JSON.stringify(products))
+
+let categorys = [
+  {
+    id: Math.floor(Math.random() * 1000000000),
+    names: "Sách khoa học",
+  },
+  {
+    id: Math.floor(Math.random() * 1000000000),
+    names: "Sách tiểu thuyết",
+  },
+  {
+    id: Math.floor(Math.random() * 1000000000),
+    names: "Sách truyện tranh",
+  },
+];
+
+
+// localStorage.setItem("categorys", JSON.stringify(categorys));
+
+function test(){
+  let products = JSON.parse(localStorage.getItem("products")) || [];
+  let categorys = JSON.parse(localStorage.getItem("categorys")) || [];
+  if(products.length === 0 || categorys.length === 0){
+    return
+  }
+  for(let i = 0; i < categorys.length; i++){
+    products[i].category = categorys[1].id
+  }
+  localStorage.setItem("products", JSON.stringify(products));
+}
+// test() 

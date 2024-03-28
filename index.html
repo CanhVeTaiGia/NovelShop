@@ -28,41 +28,43 @@
                 <button id="logout" class="signup-login" onclick="logout()">Đăng xuất</button>
             </div>
         </div>
-        <div class="carts" onclick="">
+        <div class="carts" onclick="clickOnCart()">
             <i class="fa-solid fa-cart-shopping"></i>
             <p class="carts-p">Giỏ hàng</p>
             <div class="count">
                 <p id="cart-count" class="counts">0</p>
             </div>
         </div>
-        <div class="category">
+        <!-- <div class="category">
             <i class="fa-solid fa-list"></i>
             <p class="title-category">
                 DANH MỤC SẢN PHẨM
             </p>
             <div class="category-son">
             </div>
-        </div>
+        </div> -->
     </header>
     <!-- header -->
+    <!-- <img src="" alt="" srcset=""> -->
 
     <!-- section -->
     <section>
         <nav>
-            <div class="section-category">
+            <div onclick="showCategoryItems()" class="section-category">
                 <p class="title-category">Danh mục sản phẩm</p>
-                <i class="fa-solid fa-angle-up"></i>    
-                <div class="category-list">
-                    
-                </div>
+                <i id="up-down-icon" class="fa-solid fa-angle-up"></i>    
             </div>
-            <div class="cost-filter">
+            <div id="category-list" class="category-list">
+                <!-- <div onclick="bookFromCategory()" class="catergory-items">Sách khoa học</div> -->
+                <!-- <div onclick="bookFromCategory()" class="catergory-items">Sách tiểu thuyết</div> -->
+            </div>
+            <!-- <div class="cost-filter">
                 <p class="cost-title">Lọc Giá</p>
                 <i class="fa-solid fa-angle-up"></i>
                 <div class="cost-list">
 
                 </div>
-            </div>
+            </div> -->
         </nav>
         <div class="shop">
             <img src="./assets/imgs/sectionTitle/banner_danh_muc_homepage___collection_1920x580px__light_novel__ce3fdb87f20a4423bca39b43a57eb2e9.jpg" alt="" class="banner">

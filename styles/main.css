@@ -10,7 +10,7 @@ section nav{
 }
 
 section nav .section-category{
-    position: relative;
+    /* position: relative; */
     display: flex;
     display: sticky;
     align-items: center;
@@ -20,35 +20,34 @@ section nav .section-category{
     background-color: #fff;
     padding: 10px 15px;
     border-radius: 4px;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-bottom: 1px solid #959da533;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    box-shadow: #959da533 0px 8px 24px;
     cursor: pointer;
     font-weight: 600;
-    height: 40px;
+    /* height: 40px; */
 }
 
-nav .section-category .category-list{
-    position: absolute;
-}
-
-section nav .cost-filter{
-    position: relative;
-    display: flex;
-    display: sticky;
-    align-items: center;
-    justify-content: space-between;
-    margin: 20px 0px 0px 60px;
+nav .category-list{
+    display: none;
+    margin-left: 60px;
     width: 75%;
-    height: 40px;
     background-color: #fff;
-    padding: 10px 15px;
-    border-radius: 4px;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    cursor: pointer;
-    font-weight: 600;
+    padding-left: 15px;
 }
 
-nav .cost-filter .cost-list{
-    position: absolute;
+nav .category-list .catergory-items{
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    /* display: ; */
+}
+
+nav .category-list .catergory-items:hover{
+    /* text-decoration: underline; */
+    color: #00c3ff;
 }
 
 section .shop{

@@ -70,7 +70,8 @@ form.addEventListener("submit", (e) => {
         email: email.value,
         password: password.value,
         cart: [],
-        status: false
+        status: true,
+        role: "user"
     }
     users.push(obj);
     localStorage.setItem("users", JSON.stringify(users));

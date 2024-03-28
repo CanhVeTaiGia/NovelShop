@@ -3,13 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cart</title>
     <link rel="stylesheet" href="../styles/cart.css">
     <link rel="stylesheet" href="../styles/all.css">
 </head>
 <body>
     <div class="cart-content">
-        
+        <p class="go-back" onclick="goBack()"><</p>
+        <h2>Giỏ hàng của bạn</h2>
+        <!-- <hr> -->
+        <div id="cart-content" class="cart-contents">
+            <h3 id="no-cart" class="no-cart">Giỏ hàng của bạn đang trống</h3>
+            <!-- <div class="cart-div">
+                <img id="img" src="../assets/imgs/items/aryaTap1.jpg" alt="">
+                <div onclick="deleteCart()" class="deletes">Xóa</div>
+                <div class="product-content">
+                    <h4 id="title">Arya bàn bên thi thoảng trêu ghẹo tôi bằng tiếng Nga</h4>
+                    <h3 id="cost">10000đ</h3>
+                    <div onclick="minus()" id="quantity-minus" class="quantity minus">-</div>
+                    <input value="1" type="text" id="quantity-count" class="quantity"></input>
+                    <div onclick="plus()" id="quantity-plus" class="quantity plus">+</div>
+                </div>
+            </div> -->
+            <!-- <div class="cart-div">
+                <img class="img" src="../assets/imgs/items/aryaTap1.jpg" alt="">
+                <div onclick="deleteCart()" class="deletes">Xóa</div>
+                <div class="product-content">
+                    <h4 id="title">Arya bàn bên thi thoảng trêu ghẹo tôi bằng tiếng Nga</h4>
+                    <h3 id="cost">10000đ</h3>
+                    <div onclick="minus()" id="quantity-minus" class="quantity minus">-</div>
+                    <input value="1" type="text" id="quantity-count" class="quantity"></input>
+                    <div onclick="plus()" id="quantity-plus" class="quantity plus">+</div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+    <div class="pay-content">
+        <h2>Thông tin đơn hàng</h2>
+        <h3><span>Tổng tiền:</span><span id="total-cost">0đ</span></h3>
+        <div id="alerts" class="alerts">Giỏ hàng của bạn hiện chưa đạt mức tối thiểu để thanh toán.</div>
+        <button class="pay" onclick="pay()">Thanh toán</button>
     </div>
 </body>
 <script src="../scripts/cart.js"></script>

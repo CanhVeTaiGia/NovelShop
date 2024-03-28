@@ -25,25 +25,25 @@
             <h2 class="menu">Menu</h2>
             <ul class="menu-lists">
                 <li onclick="showUser()" id="user-admin"class="menu-item off"><i class="fa-regular fa-user"></i> Users</li>
-                <li onclick="showProduct()" id="product-admin" class="menu-item off"><i class="fa-solid fa-shop"></i> Products</li>
                 <li onclick="showCategory()" id="category-main" class="menu-item off"><i class="fa-solid fa-list"></i> Category</li>
-                <li onclick="showBills()" id="bill-main" class="menu-item off"><i class="fa-solid fa-money-bills"></i> Bills</li>
+                <li onclick="showProduct()" id="product-admin" class="menu-item off"><i class="fa-solid fa-shop"></i> Products</li>
+                <li onclick="showBills()" id="bill-main" class="menu-item off"><i class="fa-solid fa-money-bills"></i> Orders</li>
             </ul>
         </nav>
         <div id="product-contents" class="products-users-contents">
-            <div id="add-or-edit" class="add-or-edit">
-                <form id="form" class="form" action="">
-                    <h1 id="title">Thay đổi/Thêm Sản Phẩm</h1>
+             <div id="add-or-edit" class="add-or-edit">
+                 <form id="form" class="form">
+                    <!--<h1 id="title">Thay đổi/Thêm Sản Phẩm</h1>
                     <input placeholder="Tên" class="change-value" id="names" value="" type="text">
                     <input placeholder="Tác giả" class="change-value" id="author" type="text">
                     <input placeholder="Tập" class="change-value" id="vol" type="number">
                     <input type="text" placeholder="Năm" class="change-value">
                     <input placeholder="Giá" class="change-value" id="cost" type="text">
                     <input placeholder="Số lượng" class="change-value" id="stock" type="text">
-                    <input placeholder="Bìa" class="change-value" type="text" id="iamge">
-                    <button id="submit" class="submit" type="submit">Thêm / Sửa</button>
-                    <button id="edit" class="submit" type="button" onclick="confirmEdit()">Sửa</button>
-                    <button type="button" onclick="cancel()" class="cancel">Hủy</button>
+                    <input placeholder="Bìa" class="change-value" type="file" id="iamge">
+                    <button id="submit" class="submit" type="submit">Thêm</button>
+                    <button id="edit" onclick="editProduct()" class="submit" type="button" onclick="confirmEdit()">Sửa</button>
+                    <button type="button" onclick="cancelProduct()" class="cancel">Hủy</button> -->
                 </form>
             </div>
             <div class="retry" id="retry">
@@ -65,9 +65,10 @@
                         <th>ID</th>
                         <th>Tên</th>
                         <th>Tác giả</th>
+                        <th>Category</th>
                         <th>Tập</th>
-                        <th>Năm</th>
                         <th>Giá</th>
+                        <th>Năm</th>
                         <th>Số lượng</th>
                         <th>Đã bán</th>
                         <th>Bìa</th>
@@ -98,6 +99,7 @@
         </div>
         <div class="products-users-contents" id="user-contents">
             <div class="tools">
+                
                 <div class="search">
                     <input placeholder="Tìm theo tên" type="search" class="search-input" id="search">
                 </div>
@@ -114,7 +116,7 @@
                         <th>Email</th>
                         <th>Trạng thái</th>
                         <th>Cart</th>
-                        <th colspan="2">Công cụ</th>
+                        <th colspan="2">Công cụ</th>        
                     </tr> 
                 </thead>
                 <tbody id="tbody-user" class="tbody">
@@ -135,7 +137,23 @@
             </div>
         </div>
         <div id="category-contents" class="products-users-contents">
+            <div id="add-or-edit-category" class="add-or-edit">
+                <form id="form-category" class="form">
+                    <!-- <h1 id="title">Thay đổi/Thêm Sản Phẩm</h1>
+                    <input placeholder="Tên" class="change-value" id="names" value="" type="text">
+                    <input placeholder="Tác giả" class="change-value" id="author" type="text">
+                    <input placeholder="Tập" class="change-value" id="vol" type="number">
+                    <input type="text" placeholder="Năm" class="change-value">
+                    <input placeholder="Giá" class="change-value" id="cost" type="text">
+                    <input placeholder="Số lượng" class="change-value" id="stock" type="text">
+                    <input placeholder="Bìa" class="change-value" type="file" id="iamge">
+                    <button id="submit" class="submit" type="submit">Thêm</button>
+                    <button id="edit" onclick="editProduct()" class="submit" type="button" onclick="confirmEdit()">Sửa</button>
+                    <button type="button" onclick="cancelProduct()" class="cancel">Hủy</button> -->
+                </form>
+            </div>
             <div class="tools">
+                <button onclick="addCategory()">Thêm thể loại</button>
                 <div class="search">
                     <input placeholder="Tìm theo tên" type="search" class="search-input" id="search-category">
                 </div>
@@ -163,9 +181,9 @@
                     </tr> -->
                 </tbody>
             </table>
-            <div id="category-contents" class="next-prev">
-                <button id="prev-category" onclick="prevUser()" class="next-prev-son">Lùi</button>
-                <button id="next-category" onclick="nextUser()" class="next-prev-son">Tiến</button>
+            <div id="category-contents-btn" class="next-prev">
+                <!-- <button id="prev-category" onclick="prevCategory()" class="next-prev-son">Lùi</button>
+                <button id="next-category" onclick="nextCategory()" class="next-prev-son">Tiến</button> -->
             </div>
         </div>
         <div id="bills-contents" class="products-users-contents">
@@ -178,7 +196,7 @@
                 <thead class="thead">
                     <tr>
                         <th>STT</th>
-                        <th>ID người mua</th>
+                        <th>ID Hóa đơn</th>
                         <th>Sản phẩm</th>
                         <!-- <th>Email</th> -->
                         <!-- <th>Trạng thái</th> -->
@@ -198,8 +216,8 @@
                 </tbody>
             </table>
             <div id="bills-contents" class="next-prev">
-                <button id="prev-category" onclick="prevUser()" class="next-prev-son">Lùi</button>
-                <button id="next-category" onclick="nextUser()" class="next-prev-son">Tiến</button>
+                <button id="prev-bills" onclick="prevUser()" class="next-prev-son">Lùi</button>
+                <button id="next-bills" onclick="nextUser()" class="next-prev-son">Tiến</button>
             </div>
         </div>
     </section>

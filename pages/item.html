@@ -28,11 +28,11 @@
                     <span class="cost-title">Giá:</span>
                     <span id="cost" class="cost"></span>
                 </div>
-                <div class="quantity-info">
+                <div id="quantity-info" class="quantity-info">
                     <span class="title">Số lượng:</span>
-                    <div class="quantity">-</div>
+                    <div onclick="minus()" id="quantity-minus" class="quantity">-</div>
                     <input value="1" type="text" id="quantity-count" class="quantity"></input>
-                    <div class="quantity">+</div>
+                    <div onclick="plus()" id="quantity-plus" class="quantity">+</div>
                 </div>
                 <div id="buybtn" class="buybtn">
                     <button id="add-to-cart" onclick="addToCart()" class="buy-or-cart">THÊM VÀO GIỎ</button>

@@ -154,6 +154,8 @@ body{
     color: #fff;
 }
 
+
+
 .add-or-edit .form .cancel{
     position: absolute;
     width: 30px;
@@ -179,6 +181,11 @@ body{
 .tbody{
     overflow-y: auto;
     /* height: 450px; */
+}
+
+.cartImg{
+    height: 100px;
+    margin-left: 10px;
 }
 
 .tbody::-webkit-scrollbar{
@@ -271,7 +278,7 @@ body{
 }
 
 .add-or-edit .form #edit{
-    display: none;
+    /* display: none; */
     cursor: pointer;
 }
 
